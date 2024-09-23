@@ -1,4 +1,9 @@
-# Kare Şeklinde İşaretçi ve QR Kod Gösterimi - Python Turtle Uygulaması
+# Square Pointer and QR Code Reveal - Python Turtle Application
+
+- [Türkçe Bölüm](#turkce-bolum)
+- [English Section](#english-section)
+
+<h1 align="center" style="font-size: 62px;" id="turkce-bolum">TÜRKÇE</h1>
 
 Bu Python projesi, Turtle grafik kütüphanesini kullanarak ekranda kare şeklinde bir işaretçi oluşturur ve hareket ettirir. Ayrıca, engeller, yükleme alanları çizer ve QR kodlarını ekranda gösterir.
 
@@ -77,5 +82,79 @@ draw_load_area(width=50, height=50, color=(1, 0.84, 0))
 
 
 
+<h1 align="center" style="font-size: 62px;" id="english-section">ENGLISH</h1>
 
 
+This Python project creates and moves a square-shaped marker on the screen using the Turtle graphics library. It also draws obstacles, loading areas, and displays QR codes on the screen.
+
+## Features
+
+- **Grid Drawing**: Creates a grid system with a resolution of 1920x1080.
+- **Square Marker**: Creates a Turtle-shaped square marker and moves it to specified coordinates.
+- **Obstacle Drawing**: Draws rectangular obstacles at a specified location.
+- **Loading Area**: Creates rectangles in specified areas for the loading area.
+- **QR Code Generation**: Creates a QR code from the given URL or text data and displays it on the screen.
+- **Image Display**: Displays a scaled image at a specified location.
+
+## Requirements
+
+The following libraries must be installed to run the project:
+
+```bash
+pip install pillow qrcode[pil] python-turtle
+```
+
+## Usage
+
+### Grid Drawing:
+```python
+draw_grid(step=100, line_color="gray", line_thickness=2)
+```
+Draws a gray grid on the screen with the specified steps.
+
+### Moving the Pointer:
+```python
+move(300, 0)
+```
+Moves the square pointer according to the given x and y coordinates.
+
+### Drawing an Obstacle:
+```python
+draw_barrier(width=100, height=50, color="blue")
+```
+Draws a blue rectangular obstacle.
+
+### Drawing Loading Area:
+```python
+draw_load_area(width=50, height=50, color=(1, 0.84, 0))
+```
+Creates a loading area with the specified dimensions.
+
+### Creating QR Code:
+```python
+create_qr_code(data="https://www.example.com", file_path="qrcode.png")
+```
+Creates and saves a QR code from the specified URL or text data.
+
+### Displaying Images:
+```python
+draw_image(input_image_path="engel.png", new_width=50, new_height=50)
+```
+Places the specified image file on the screen with a size of 60x60 pixels.
+
+## Example Usage:
+```python
+# Draw grid
+draw_grid(step=100, line_color="gray", line_thickness=2)
+
+# Move the pointer and draw barriers
+move(300, 0)
+draw_barrier(width=100, height=50, color="blue")
+
+# Create and display QR code
+create_qr_code(data="https://www.example.com", file_path="qrcode.png")
+draw_image(file_path="qrcode.png")
+
+# Draw loading area
+draw_load_area(width=50, height=50, color=(1, 0.84, 0))
+```
